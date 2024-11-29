@@ -1,0 +1,17 @@
+[package]
+name = "repro-test"
+version = "0.1.0"
+authors = ["Hamcha <hamcha@crunchy.rocks>"]
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0.197", features = ["derive"] }
+dioxus = { version = "0.6.0-alpha.5", features = ["fullstack"] }
+
+# Debug
+dioxus-logger = "0.5.1"
+
+[features]
+default = []
+server = ["dioxus/server"]
+web = ["dioxus/web"]
